@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 60em;
+            gap: 2em;
+            background-color: #3a3939;
+        }
+
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 1px solid #333;
+            background-color: #525252;
+            transition:all 0.4s ease;
+            box-shadow: 0 0  10px 1px #868585 inset;
+        }
+
+
+        input{
+            background-color: #525252;
+            border: none;
+            box-shadow: 0 0  4px 0.1px #868585 inset;
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+<input  class="input" type="text">
+
+
+
+    <script>
+        let box=document.querySelector("div"),
+            input=document.querySelector("input");
+        input.addEventListener("input",()=>{
+            box.style.borderRadius=input.value;
+            box.style.backgroundColor=input.value;
+
+        })
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
